@@ -32,7 +32,8 @@ const EAST_LOS_HIGH_POSTER_URL = "https://static.wikia.nocookie.net/hulu/images/
 let titles = [
     "Fresh Prince of Bel Air",
     "Curb Your Enthusiasm",
-    "East Los High"
+    "East Los High",
+    "The Good Place" //testing card function
 ];
 // Your final submission should have much more data than this, and 
 // you should use more than just an array of strings to store it all.
@@ -49,6 +50,7 @@ function showCards() {
 
         // This part of the code doesn't scale very well! After you add your
         // own data, you'll need to do something totally different here.
+        //~~~~~~~~~~~~~~~~~~~~~~Might be a good idea to use mapping function here~~~~~~~~~~~~~~~~~
         let imageURL = "";
         if (i == 0) {
             imageURL = FRESH_PRINCE_URL;
