@@ -76,6 +76,10 @@ function editCardContent(card, newTitle, newImageURL, newAuthor, newPages, newRa
     const listElement3 = document.createElement("LI");
     let genreText = "";
     for(let i = 0; i < newGenres.length; i++){
+        if(newGenres.length == 1){
+            genreText = genreText + newGenres[i];
+            break;
+        }
         if(i == newGenres.length - 1){
             genreText = genreText + "and "
         }
@@ -125,12 +129,31 @@ function removeLastCard() {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function addCard(){
     event.preventDefault(); //prevents the refreshing of page- used in a previous project of mine
-    // console.log(document.getElementById("title").value);
-    // console.log(document.getElementById("url").value);
+    newBook = [];
     newTitle = document.getElementById("title").value;
-    titles.push(newTitle);
+        newBook["title"] = newTitle;
+    // titles.push(newTitle);
+    newAuthor = document.getElementById("author").value;
+        newBook["author"] = newAuthor;
+    newYearOfPub = document.getElementById("yearOfPub").value;
+        newBook["yearOfPub"] = newYearOfPub;
+    newPages = document.getElementById("pages").value;
+        newBook["pages"] = newPages;
+    newGenres = document.getElementById("genre").value;
+    newGenresArr = [];
+    newGenresArr.push(newGenres);
+        newBook["genre"] = newGenresArr;
+    newRating = document.getElementById("rating").value;
+        newBook["rating"] = newRating;
     newURL = document.getElementById("url").value;
-    urlArray.push(newURL);
+        newBook["url"] = newURL;
+    // urlArray.push(newURL);
+    newImage = document.getElementById("image").value;
+        newBook["image"] = newImage;
+    newQuote = document.getElementById("quote").value;
+        newBook["quote"] = newQuote;
+    console.log(newBook);
+    books.push(newBook);
     showCards();
 }
 
