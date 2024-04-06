@@ -139,9 +139,17 @@ function addCard(){
         newBook["yearOfPub"] = newYearOfPub;
     newPages = document.getElementById("pages").value;
         newBook["pages"] = newPages;
-    newGenres = document.getElementById("genre").value;
+    //Genres are put into an array. Using checkbox, I need to check if each one is checked or not
     newGenresArr = [];
-    newGenresArr.push(newGenres);
+    for(let i = 1; i < 8; i++){
+        // console.log("In Genres Array for loop!")
+        let checkID = "genre" + i.toString();
+        // console.log(checkID);
+        if(document.getElementById(checkID).checked){
+            // console.log(checkID + " was Checked!!");
+            newGenresArr.push(document.getElementById(checkID).value);
+        }
+    }
         newBook["genre"] = newGenresArr;
     newRating = document.getElementById("rating").value;
         newBook["rating"] = newRating;
