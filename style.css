@@ -41,6 +41,21 @@ select:hover{
     background-color: var(--blueBg);
 }
 /* ************* Start of Individual Class Styling ************* */
+/* Thank you stack Overflow :) */
+@keyframes slideInFromAbove {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+header {  
+    /* Calls the slideInFromLeft animation defined above */
+    animation: 1s ease-out 0s 1 slideInFromAbove;
+}  
+
 .main-header {
     background-color: var(--blueBg);
     padding-bottom: 10px;
@@ -54,6 +69,23 @@ select:hover{
     font-family: "Josefin Sans", sans-serif;
     font-weight: normal;
     color: rgb(0, 0, 0);
+    text-shadow: 4px 4px gray;
+}
+
+.sortingSection{
+    padding: 10px;
+}
+
+.addCardLinkButton{
+    background-color: var(--blueBg);
+    color: black;
+    position: absolute;
+    right: 0;
+    left: auto;
+}
+.addCardLinkButton:hover{
+    background-color: var(--blueNavyButton);
+    color: white;
 }
 
 .searchResults {

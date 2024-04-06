@@ -46,7 +46,7 @@
         <button onclick="sortByRatingLH();" id="sortRatingLH">
             Sort By Rating ↓
         </button>
-        <a href="#addCard"><button>
+        <a href="#addCard"><button class="addCardLinkButton">
             Add a Book
         </button></a>
         <br>
@@ -87,7 +87,7 @@
     </div>
 
     <div class="addCard" id="addCard">
-        <p class="addCardDescription">Hello! To add a book, please fill out the following information, then click "Add Card".</p>
+        <p class="addCardDescription">Hello! To add a book to the database, please fill out the following information, then click "Add Book".</p>
         <form action="" class="addCardForm">
             <label for="title">Book Title: </label>
                 <input type="text" id="title" name="title" class="inputTitle" required><br>
@@ -130,7 +130,7 @@
                 <input type="url" id="image" name="image" class="inputimage"><br>
             <label for="quote">Quote: </label>
                 <input type="text" id="quote" name="quote" class="inputquote" required><br>
-            <button onclick="addCard();">Add Card</button>
+            <button onclick="addCard();">Add Book</button>
         </form>
     </div>
 
