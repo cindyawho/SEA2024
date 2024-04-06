@@ -295,8 +295,6 @@ function filterFunction(){
     // console.log(userInput);
     if(userSelect == "title"){
         for(let i = 0; i < books.length; i++){
-            // let ifCondition = "!books[" + i.toString() + "]." + userSelect + ".match(" + userInput + ")";
-            // console.log(ifCondition);
             let lowerData = books[i].title.toLowerCase();
             // console.log(lowerData);
             if(!lowerData.match(userInput)){
@@ -313,15 +311,23 @@ function filterFunction(){
                 bookDiv.style.display = "none";
             }
         }
-    } //else if(userSelect == "genre"){
-    //     for(let i = 0; i < books.length; i++){
-    //         let size = books[i]
-    //         if(!books[i].genre.match(userInput)){
-    //             bookDiv = document.getElementById("bookNum" + i.toString());
-    //             bookDiv.style.display = "none";
-    //         }
-    //     }
-    // }
+    } else if(userSelect == "genre"){
+        for(let i = 0; i < books.length; i++){
+            let genreArrSize = books[i].genre.length;
+            let checkMatch = false;
+            for(let j = 0; j < genreArrSize; j++){
+                let lowerData = books[i].genre[j].toLowerCase();
+                if(lowerData.match(userInput)){
+                    checkMatch = true;
+                    break;
+                }
+            }
+            if(!checkMatch){
+                bookDiv = document.getElementById("bookNum" + i.toString());
+                bookDiv.style.display = "none";
+            }
+        }
+    }
 }
 function filterResetFunction(){
     for(let i = 0; i < books.length; i++){
