@@ -12,6 +12,16 @@
     <header class="main-header">
         <h1 class="title">Books I Have Read in 2024</h1>
     </header>
+    <div class="addCard">
+        <p class="addCardDescription">Hello! To add a card, please fill out the following information, then click "Add Card".</p>
+        <form action="" class="addCardForm">
+            <label for="title">Book Title:</label>
+            <input type="text" id="title" name="title" class="inputTitle"><br>
+            <label for="url">URL:</label>
+            <input type="text" id="url" name="url" class="inputURL"><br>
+            <button onclick="addCard();">Add Card</button>
+        </form>
+    </div>
     <div id="card-container">
         
     </div>
@@ -26,16 +36,7 @@
             </ul>
         </div>
     </div>
-    <div class="addCard">
-        <p class="addCardDescription">To add a card, please fill out the following information, then click "Add Card".</p>
-        <form action="" class="addCardForm">
-            <label for="title">Book Title:</label>
-            <input type="text" id="title" name="title" class="inputTitle"><br>
-            <label for="url">URL:</label>
-            <input type="text" id="url" name="url" class="inputURL"><br>
-            <button onclick="addCard();">Add Card</button>
-        </form>
-    </div>
+
     <div class="footer">
         <button onclick="quoteAlert();">
             Get A Quote!

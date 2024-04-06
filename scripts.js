@@ -66,6 +66,11 @@ function showCards() {
         const nextCard = templateCard.cloneNode(true); // Copy the template card
         editCardContent(nextCard, title, imageURL); // Edit title and image
         cardContainer.appendChild(nextCard); // Add new card to the container
+        // if(i%4 == 0){
+            //Probelm: adding a lot of cards made them smaller and then it went off the screen. 
+            //So I was thinking of using modulo and adding breaks after every 4 items
+            //Solution: then realized I could do fix this in css, especially since it's using flex! so I used flex-wrap
+        // }
     }
 }
 
