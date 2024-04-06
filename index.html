@@ -13,16 +13,6 @@
     <header class="main-header">
         <h1 class="title">Books I Have Read in 2024</h1>
     </header>
-    <div class="addCard">
-        <p class="addCardDescription">Hello! To add a card, please fill out the following information, then click "Add Card".</p>
-        <form action="" class="addCardForm">
-            <label for="title">Book Title:</label>
-            <input type="text" id="title" name="title" class="inputTitle"><br>
-            <label for="url">URL:</label>
-            <input type="text" id="url" name="url" class="inputURL"><br>
-            <button onclick="addCard();">Add Card</button>
-        </form>
-    </div>
     <div id="card-container">
         
     </div>
@@ -35,6 +25,49 @@
             </ul>
             <p class="rating"></p>
         </div>
+    </div>
+
+    <div class="addCard">
+        <p class="addCardDescription">Hello! To add a card, please fill out the following information, then click "Add Card".</p>
+        <form action="" class="addCardForm">
+            <label for="title">Book Title: </label>
+                <input type="text" id="title" name="title" class="inputTitle" required><br>
+            <label for="author">Author: </label>
+                <input type="text" id="Author" name="Author" class="inputAuthor" required><br>
+            <label for="yearOfPub">Year of Publication: </label>
+                <input type="number" id="yearOfPub" name="yearOfPub" max="2025" class="inputYear"><br>
+            <label for="pages">Pages: </label>
+                <input type="number" id="pages" name="pages" min="1" class="inputPages"><br>
+            <!-- I didn't like how the select looked so I tried radio buttons but... you'll see the comment below-->
+            <label for="genre">Genre(s): </label>
+                <select name="genre" id="genre" class="inputGenre" multiple>
+                    <option value="mythology">Mythology</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="historicalFiction">Historical Fiction</option>
+                    <option value="nonfiction">Nonfiction</option>
+                    <option value="scienceFiction">Science Fiction</option>
+                    <option value="romance">Romance</option>
+                </select> <span class="genreSelectNote">(Note: hold Ctrl/Command to select multiple)</span><br>
+            <!-- Unclicking radio buttons doesn't work without jQuery, will come back to this if I have time -->
+            <!-- <div class="radioGenres">
+                <input type="radio" id="genre" name="genre1" value="mythology">
+                <label for="mythology">mythology</label><br>
+                <input type="radio" id="genre" name="genre2" value="fantasy">
+                <label for="fantasy">fantasy</label><br>
+                <input type="radio" id="genre" name="genre3" value="mystery">
+                <label for="mystery">mystery</label>
+            </div> -->
+            <label for="rating">Rating: </label>
+                <input type="number" id="rating" name="rating" min="0" max="5"><br>
+            <label for="url">Goodreads URL: </label>
+                <input type="url" id="url" name="url" class="inputURL"><br>
+            <label for="image">Book Cover URL: </label>
+                <input type="url" id="image" name="image" class="inputimage"><br>
+            <label for="quote">Quote: </label>
+                <input type="text" id="quote" name="quote" class="inputquote" required><br>
+            <button onclick="addCard();">Add Card</button>
+        </form>
     </div>
 
     <div class="footer">
