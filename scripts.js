@@ -41,6 +41,8 @@ function showCards() {
         let genres = books[i].genre;
 
         const nextCard = templateCard.cloneNode(true); // Copy the template card
+        let tempID = "bookNum" + i.toString();
+        nextCard?.setAttribute("id", tempID); //Add id with number to edit styles during filtering functions
         editCardContent(nextCard, title, imageURL, author, pages, rating, yearOfPub, genres); // Edit title, image, author, pages, rating, yoP, genres
         cardContainer.appendChild(nextCard); // Add new card to the container
     }
@@ -278,4 +280,23 @@ function sortByTitleZA(){
         }
     });
     showCards();
+}
+
+//Filtering Functions
+function filterFunction(){
+    let userInput = document.getElementById("filter").value;
+    // console.log(userInput);
+    for(let i = 0; i < books.length; i++){
+        if(!books[i].title.match(userInput)){
+            bookDiv = document.getElementById("bookNum" + i.toString());
+            // console.log(bookDiv);
+            bookDiv.style.display = "none";
+        }
+    }
+}
+function filterResetFunction(){
+    for(let i = 0; i < books.length; i++){
+        bookDiv = document.getElementById("bookNum" + i.toString());
+        bookDiv.style.display = "flex";
+    }
 }

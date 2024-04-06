@@ -93,6 +93,8 @@ ul li{
     font-size: 1.5rem;
 }
 
-form, textarea, input{
+form, textarea, input, label, select{
     font-size: 1.5rem;
+    padding: 5px;
+    margin: 5px;
 }
