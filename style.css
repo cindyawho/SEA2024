@@ -82,7 +82,7 @@ select:hover{
 .card-content {
     padding: 20px;
     font-family: "Verdana";
-    color: #777;
+    color: var(--blueNavyButton);
 }
 
 .card-content h2 {
@@ -106,11 +106,12 @@ select:hover{
 .rating{
     text-align: center;
     font-size: 1.5rem;
+    color: gold;
 }
 
 ul li{
-    line-height: 1.5rem;
-    font-size: 1.25rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
 }
 
 /* ************* FORM Styling ************* */

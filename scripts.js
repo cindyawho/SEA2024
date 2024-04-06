@@ -101,13 +101,15 @@ function editCardContent(card, newTitle, newImageURL, newAuthor, newPages, newRa
     const cardRating = card.querySelector("p");
     let starRating = "";
     for(let i = 0; i < newRating; i++){
-        starRating = starRating + "*"; //~~~~~~~~~~~~~~~~Maybe use an image of a star emoji and format it using css later
+        starRating = starRating + "★";
     }
     cardRating.textContent = starRating;
     //Descriptor of rating
     const ratingParagraph = document.createElement("p");
     const textNode = document.createTextNode(newRating + " Stars");
     ratingParagraph.append(textNode);
+    ratingParagraph.style.color="gray";
+    ratingParagraph.style.fontStyle="italic";
     cardRating.appendChild(ratingParagraph);
 }
 
