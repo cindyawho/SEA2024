@@ -13,6 +13,26 @@
     <header class="main-header">
         <h1 class="title">Books I Have Read in 2024</h1>
     </header>
+    <div class="sortingSection">
+        <button onclick="sortByPagesLH();" id="sortPagesLH">
+            Sort By Pages ↓
+        </button>
+        <button onclick="sortByPagesHL();" id="sortPagesHL" style="display: none;">
+            Sort By Pages ↑
+        </button>
+        <button onclick="sortByYearLH();" id="sortYearLH">
+            Sort By Year of Publication ↓
+        </button>
+        <button onclick="sortByYearHL();" id="sortYearHL" style="display: none;">
+            Sort By Year of Publication ↑
+        </button>
+        <button onclick="sortByRatingHL();" style="display: none;" id="sortRatingHL">
+            Sort By Rating ↑
+        </button>
+        <button onclick="sortByRatingLH();" id="sortRatingLH">
+            Sort By Rating ↓
+        </button>
+    </div>
     <div id="card-container">
         
     </div>

@@ -173,3 +173,56 @@ function addCard(){
 //~~~~~        before this script.js script line in the HTML file, and now this file has access to it too!
 // console.log(books);
 // console.log(books[0].title);
+
+//Creating sorting functions by for Number values first (thank you Stack Overflow for number sorting help!)
+function sortByPagesLH() {
+    // console.log("In the function sortByPages()!");
+    document.getElementById("sortPagesHL").style.display = "inline-block";
+    document.getElementById("sortPagesLH").style.display = "none";
+    books.sort(function(a, b){
+        // console.log("a: " + a);
+        // console.log("b: " + b);
+        return a.pages - b.pages;
+    });
+    showCards();
+}
+function sortByPagesHL() {
+    document.getElementById("sortPagesLH").style.display = "inline-block";
+    document.getElementById("sortPagesHL").style.display = "none";
+    books.sort(function(a, b){
+        return b.pages - a.pages;
+    });
+    showCards();
+}
+function sortByYearLH() {
+    document.getElementById("sortYearHL").style.display = "inline-block";
+    document.getElementById("sortYearLH").style.display = "none";
+    books.sort(function(a, b){
+        return a.yearOfPub - b.yearOfPub;
+    });
+    showCards();
+}
+function sortByYearHL() {
+    document.getElementById("sortYearLH").style.display = "inline-block";
+    document.getElementById("sortYearHL").style.display = "none";
+    books.sort(function(a, b){
+        return b.yearOfPub - a.yearOfPub;
+    });
+    showCards();
+}
+function sortByRatingLH() {
+    document.getElementById("sortRatingHL").style.display = "inline-block";
+    document.getElementById("sortRatingLH").style.display = "none";
+    books.sort(function(a, b){
+        return a.rating - b.rating;
+    });
+    showCards();
+}
+function sortByRatingHL() {
+    document.getElementById("sortRatingHL").style.display = "none";
+    document.getElementById("sortRatingLH").style.display = "inline-block";
+    books.sort(function(a, b){
+        return b.rating - a.rating;
+    });
+    showCards();
+}
