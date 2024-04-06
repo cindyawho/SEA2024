@@ -4,7 +4,7 @@ books =
 [
 {
     "title" : "Percy Jackson: The Lightning Thief",
-    "author" : "Rick Riordan",
+    "author" : "Riordan, Rick",
     "pages" : 377,
     "genre" : ["Fantasy", "Young Adult", "Mythology", "Middle Grade"],
     "yearOfPub" : 2005,
@@ -15,7 +15,7 @@ books =
 },
 {
     "title" : "Clytemnestra",
-    "author" : "Costanza Casati",
+    "author" : "Casati, Costanza",
     "pages" : 448,
     "genre" : ["Mythology", "Fantasy", "Historical Fiction"],
     "yearOfPub" : 2023,
@@ -26,7 +26,7 @@ books =
 },
 {
     "title" : "The Chalice of the Gods",
-    "author" : "Rick Riordan",
+    "author" : "Riordan, Rick",
     "pages" : 268,
     "genre" : ["Fantasy", "Mythology", "Young Adult"],
     "yearOfPub" : 2023,
@@ -37,7 +37,7 @@ books =
 },
 {
     "title" : "Psyche and Eros",
-    "author" : "Luna McNamara",
+    "author" : "McNamara, Luna",
     "pages" : 352,
     "genre" : ["Mythology", "Fantasy", "Romance"],
     "yearOfPub" : 2023,
@@ -48,7 +48,7 @@ books =
 },
 {
     "title" : "Dreamland: The True Tale of America\'s Opiate Epidemic",
-    "author" : "Sam Quinones",
+    "author" : "Quinones, Sam",
     "pages" : 384,
     "genre" : ["Nonfiction", "History", "True Crime", "Politics"],
     "yearOfPub" : 2015,
@@ -59,7 +59,7 @@ books =
 },
 {
     "title" : "Chinese Cinderella: The True Story of an Unwanted Daughter",
-    "author" : "Adeline Yen Mah",
+    "author" : "Yen Mah, Adeline",
     "pages" : 240,
     "genre" : ["Nonfiction", "Memoir", "Biography"],
     "yearOfPub" : 1999,
@@ -70,7 +70,7 @@ books =
 },
 {
     "title" : "Kindred",
-    "author" : "Octavia E. Butler",
+    "author" : "Butler, Octavia E.",
     "pages" : 288,
     "genre" : ["Historical Fiction", "Fiction", "Science Fiction"],
     "yearOfPub" : 1979,
@@ -81,7 +81,7 @@ books =
 },
 {
     "title" : "Daughters of Sparta",
-    "author" : "Claire Heywood",
+    "author" : "Heywood, Claire",
     "pages" : 370,
     "genre" : ["Mythology", "Historical Fiction"],
     "yearOfPub" : 2021,
@@ -92,7 +92,7 @@ books =
 },
 {
     "title" : "Adventure in Greece: A Bilingual Story for Advanced Beginners to Intermediate Level",
-    "author" : "Athina Veloudou, Hugh Finlayson",
+    "author" : "Veloudou, Athina and Finlayson, Hugh",
     "pages" : 50,
     "genre" : ["Fiction", "Language"],
     "yearOfPub" : 2022,
@@ -103,7 +103,7 @@ books =
 },
 {
     "title" : "Lady Tan\'s Circle of Women",
-    "author" : "Lisa See",
+    "author" : "See, Lisa",
     "pages" : 368,
     "genre" : ["Historical Fiction", "Fiction", "Historical", "China"],
     "yearOfPub" : 2023,
@@ -114,7 +114,7 @@ books =
 },
 {
     "title" : "Mexican Gothic",
-    "author" : "Silva-Moreno Garcia",
+    "author" : "Moreno-Garcia, Silva",
     "pages" : 320,
     "genre" : ["Horror", "Fiction", "Historical Fiction", "Gothic", "Mystery"],
     "yearOfPub" : 2020,
@@ -125,7 +125,7 @@ books =
 },
 {
     "title" : "Can\'t We Talk about Something More Pleasant?",
-    "author" : "Roz Chast",
+    "author" : "Chast, Roz",
     "pages" : 228,
     "genre" : ["Graphic Novels", "Memoir"],
     "yearOfPub" : 2014,
@@ -136,7 +136,7 @@ books =
 },
 {
     "title" : "6 Times We Almost Kissed [and One Time We Did]",
-    "author" : "Tess Sharpe",
+    "author" : "Sharpe, Tess",
     "pages" : 384,
     "genre" : ["Romance", "Lesbian", "Young Adult"],
     "yearOfPub" : 2023,
@@ -147,7 +147,7 @@ books =
 },
 {
     "title" : "Y: The Last Man Omnibus",
-    "author" : "Brian K. Vaughan",
+    "author" : "Vaughan, Brian K.",
     "pages" : 1424,
     "genre" : ["Comics", "Graphic Novels", "Science Fiction"],
     "yearOfPub" : 2008,
@@ -167,5 +167,6 @@ books =
 //     "yearOfPub" : 123,
 //     "rating" : 123,
 //     "url" : "abc",
-//     "image" : "abc"
+//     "image" : "abc",
+//     "quote" : "abc"
 // },

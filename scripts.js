@@ -110,12 +110,12 @@ function editCardContent(card, newTitle, newImageURL, newAuthor, newPages, newRa
 document.addEventListener("DOMContentLoaded", showCards);
 
 function quoteAlert() {
-    console.log("Quote Alert Button Clicked!")
+    // console.log("Quote Alert Button Clicked!")
     // let x = Math.random()*10 + Math.random()*4; // first attempt for random number between 0 and 14, but let's make it dynamic [researched]
     let min = 0;
     let max = books.length;
     let x = Math.floor(Math.random() * (max - min + 1) + min); 
-    console.log(x);
+    // console.log(x);
     alert(books[x].quote + "\n  From the book: " + books[x].title);
 }
 
@@ -164,15 +164,6 @@ function addCard(){
     books.push(newBook);
     showCards();
 }
-
-// Trying to get my data from the data file to here
-// import books from "./data";
-// // const books = getData();
-// console.log(books);
-//~~~~~Update: Turns out I just need to add this line  <script type="text/javascript" src="data.js"></script>
-//~~~~~        before this script.js script line in the HTML file, and now this file has access to it too!
-// console.log(books);
-// console.log(books[0].title);
 
 //Creating sorting functions by for Number values first (thank you Stack Overflow for number sorting help!)
 function sortByPagesLH() {
@@ -223,6 +214,68 @@ function sortByRatingHL() {
     document.getElementById("sortRatingLH").style.display = "inline-block";
     books.sort(function(a, b){
         return b.rating - a.rating;
+    });
+    showCards();
+}
+
+//Creating sorting functions by for Author and Title
+function sortByAuthorAZ(){
+    document.getElementById("sortAuthorAZ").style.display = "none";
+    document.getElementById("sortAuthorZA").style.display = "inline-block";
+    books.sort(function(a, b){
+        // console.log("a: " + a.author);
+        // console.log("b: " + b.author);
+        // console.log(a.author - b.author);
+        if(a.author < b.author){
+            return -1;
+        } else if(a.author > b.author){
+            return 1;
+        } else{
+            return 0;
+        }
+    });
+    showCards();
+}
+function sortByAuthorZA(){
+    document.getElementById("sortAuthorZA").style.display = "none";
+    document.getElementById("sortAuthorAZ").style.display = "inline-block";
+    books.sort(function(a, b){
+        if(a.author < b.author){
+            return 1;
+        } else if(a.author > b.author){
+            return -1;
+        } else{
+            return 0;
+        }
+    });
+    showCards();
+}
+
+function sortByTitleAZ(){
+    document.getElementById("sortTitleAZ").style.display = "none";
+    document.getElementById("sortTitleZA").style.display = "inline-block";
+    books.sort(function(a, b){
+        if(a.title < b.title){
+            return -1;
+        } else if(a.title > b.title){
+            return 1;
+        } else{
+            return 0;
+        }
+    });
+    showCards();
+}
+function sortByTitleZA(){
+    document.getElementById("sortTitleZA").style.display = "none";
+    document.getElementById("sortTitleAZ").style.display = "inline-block";
+    books.sort(function(a, b){
+        if(a.title < b.title){
+            return 1;
+        } else if(a.title > b.title){
+            return -1;
+        } else{
+            return 0;
+        }
     });
     showCards();
 }
