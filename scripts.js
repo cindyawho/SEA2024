@@ -286,6 +286,17 @@ function sortByTitleZA(){
 }
 
 //Filtering Functions
+function filterCategoryCheck(){
+    // console.log("genreCheck() called!");
+    let userSelect = document.getElementById("filterSelect").value;
+    if(userSelect == "genre"){
+        document.getElementById("genre").style.display = "inline-block";
+        document.getElementById("filter").style.display = "none";
+    } else{
+        document.getElementById("genre").style.display = "none";
+        document.getElementById("filter").style.display = "inline-block";
+    }
+}
 function filterFunction(){
     let searchResults = 0;
     for(let i = 0; i < books.length; i++){
@@ -294,10 +305,10 @@ function filterFunction(){
     }
     let userSelect = document.getElementById("filterSelect").value;
     // console.log(userSelect);
-    let userInput = document.getElementById("filter").value;
-    userInput = userInput.toLowerCase();
     // console.log(userInput);
     if(userSelect == "title"){
+        let userInput = document.getElementById("filter").value;
+        userInput = userInput.toLowerCase();    
         for(let i = 0; i < books.length; i++){
             let lowerData = books[i].title.toLowerCase();
             // console.log(lowerData);
@@ -310,6 +321,8 @@ function filterFunction(){
             }
         }
     } else if (userSelect == "author"){
+        let userInput = document.getElementById("filter").value;
+        userInput = userInput.toLowerCase();    
         for(let i = 0; i < books.length; i++){
             let lowerData = books[i].author.toLowerCase();
             if(!lowerData.match(userInput)){
@@ -320,6 +333,8 @@ function filterFunction(){
             }
         }
     } else if(userSelect == "genre"){
+        let userInput = document.getElementById("genre").value;
+        userInput = userInput.toLowerCase();    
         for(let i = 0; i < books.length; i++){
             let genreArrSize = books[i].genre.length;
             let checkMatch = false;
