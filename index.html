@@ -4,6 +4,7 @@
 <head>
     <title>2024 Books | Home</title>
     <meta name="description" content="Books I Have Read in 2024">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="style.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,40 +17,25 @@
         <h1 class="title">Books I've Read in 2024</h1>
     </header>
     <div class="sortingSection">
-        <button onclick="sortByTitleAZ();" id="sortTitleAZ">
-            Sort By Title ↓
-        </button>
-        <button onclick="sortByTitleZA();" id="sortTitleZA" style="display: none;">
-            Sort By Title ↑
-        </button>
-        <button onclick="sortByAuthorAZ();" id="sortAuthorAZ">
-            Sort By Author ↓
-        </button>
-        <button onclick="sortByAuthorZA();" id="sortAuthorZA" style="display: none;">
-            Sort By Author ↑
-        </button>
-        <button onclick="sortByPagesLH();" id="sortPagesLH">
-            Sort By Pages ↓
-        </button>
-        <button onclick="sortByPagesHL();" id="sortPagesHL" style="display: none;">
-            Sort By Pages ↑
-        </button>
-        <button onclick="sortByYearLH();" id="sortYearLH">
-            Sort By Year of Publication ↓
-        </button>
-        <button onclick="sortByYearHL();" id="sortYearHL" style="display: none;">
-            Sort By Year of Publication ↑
-        </button>
-        <button onclick="sortByRatingHL();" style="display: none;" id="sortRatingHL">
-            Sort By Rating ↑
-        </button>
-        <button onclick="sortByRatingLH();" id="sortRatingLH">
-            Sort By Rating ↓
-        </button>
+        <label for="sort">Sort by: </label>
+        <select name="sortSelect" id="sortSelect" size="1" onclick="sortCategoryCheck()">
+            <option></option>
+            <option value="titleAZ">Title: A - Z</option>
+            <option value="titleZA">Title: Z - A</option>
+            <option value="authorAZ">Author: A - Z</option>
+            <option value="authorZA">Author: Z - A</option>
+            <option value="pagesLH">Pages: Low to High</option>
+            <option value="pagesHL">Pages: High to Low</option>
+            <option value="yearOfPubLH">Year of Publication: Old to New</option>
+            <option value="yearOfPubHL">Year of Publication: New to Old</option>
+            <option value="ratingLH">Rating: Low to High</option>
+            <option value="ratingHL">Rating: High to Old</option>
+        </select>
         <a href="#addCard"><button class="addCardLinkButton">
             Add a Book
         </button></a>
-        <br>
+    </div>
+    <div class="sortingSection filterSection">
         <label for="filter">Search by: </label>
         <select name="filterSelect" id="filterSelect" size="1" onchange="filterCategoryCheck()">
             <option value="title">Title</option>
