@@ -58,8 +58,13 @@ function editCardContent(card, newTitle, newImageURL) {
 document.addEventListener("DOMContentLoaded", showCards);
 
 function quoteAlert() {
-    console.log("Button Clicked!")
-    alert("I guess I can kiss heaven goodbye, because it got to be a sin to look this good!");
+    console.log("Quote Alert Button Clicked!")
+    // let x = Math.random()*10 + Math.random()*4; // first attempt for random number between 0 and 14, but let's make it dynamic [researched]
+    let min = 0;
+    let max = books.length;
+    let x = Math.floor(Math.random() * (max - min + 1) + min); 
+    console.log(x);
+    alert(books[x].quote + "\n  From the book: " + books[x].title);
 }
 
 function removeLastCard() {

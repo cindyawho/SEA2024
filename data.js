@@ -10,7 +10,8 @@ books =
     "yearOfPub" : 2005,
     "rating" : 5,
     "url" : "https://www.goodreads.com/book/show/28187.The_Lightning_Thief?ref=nav_sb_ss_1_7",
-    "image" : "https://i0.wp.com/books.disney.com/content/uploads/2013/09/9780786856299.jpg?fit=405%2C612&ssl=1"
+    "image" : "https://i0.wp.com/books.disney.com/content/uploads/2013/09/9780786856299.jpg?fit=405%2C612&ssl=1", 
+    "quote" : "\"If my life is going to mean anything, I have to live it myself.\""
 },
 {
     "title" : "Clytemnestra",
@@ -20,7 +21,8 @@ books =
     "yearOfPub" : 2023,
     "rating" : 4,
     "url" : "https://www.goodreads.com/book/show/61361681-clytemnestra?ac=1&from_search=true&qid=LufubZ9FXC&rank=1",
-    "image" : "https://dynamic.indigoimages.ca/v1/books/books/1443470384/1.jpg?width=614&maxheight=614&quality=85"
+    "image" : "https://dynamic.indigoimages.ca/v1/books/books/1443470384/1.jpg?width=614&maxheight=614&quality=85",
+    "quote" : "\"Kings and heroes drop like flies, but queens outlive them all.\""
 },
 {
     "title" : "The Chalice of the Gods",
@@ -30,7 +32,8 @@ books =
     "yearOfPub" : 2023,
     "rating" : 5,
     "url" : "https://www.goodreads.com/book/show/63035432-the-chalice-of-the-gods",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1677259920i/63035432.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1677259920i/63035432.jpg",
+    "quote" : "\"I imagined Annabeth with silver hair and wrinkles, chuckling as she called me Seaweed Brain for the four millionth time in our lives.\"",
 },
 {
     "title" : "Psyche and Eros",
@@ -40,17 +43,19 @@ books =
     "yearOfPub" : 2023,
     "rating" : 5,
     "url" : "https://www.goodreads.com/book/show/62292422-psyche-and-eros",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1675646235i/62292422.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1675646235i/62292422.jpg",
+    "quote" : "\"By learning to truly love someone else, you learn to love the world. And yourself, which may be even harder.\"",
 },
 {
-    "title" : "Dreamland: The True Tale of America's Opiate Epidemic",
+    "title" : "Dreamland: The True Tale of America\'s Opiate Epidemic",
     "author" : "Sam Quinones",
     "pages" : 384,
     "genre" : ["Nonfiction", "History", "True Crime", "Politics"],
     "yearOfPub" : 2015,
     "rating" : 4,
     "url" : "https://www.goodreads.com/book/show/22529381-dreamland",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1421965034i/22529381.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1421965034i/22529381.jpg",
+    "quote" : "\"The U.S. medical system is good at fighting disease, Cahana believes, and awful at leading people to wellness.\"",
 },
 {
     "title" : "Chinese Cinderella: The True Story of an Unwanted Daughter",
@@ -60,7 +65,8 @@ books =
     "yearOfPub" : 1999,
     "rating" : 4,
     "url" : "https://www.goodreads.com/book/show/54579611-chinese-cinderella",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595084879i/54579611.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1595084879i/54579611.jpg",
+    "quote" : "\"I read because I have to. It drives everything else from my mind. It lets me escape to find other world.\"",
 },
 {
     "title" : "Kindred",
@@ -70,7 +76,8 @@ books =
     "yearOfPub" : 1979,
     "rating" : 5,
     "url" : "https://www.goodreads.com/book/show/60931.Kindred",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1339423248i/60931.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1339423248i/60931.jpg",
+    "quote" : "\"Educated didn\'t mean smart. He had a point. Nothing in my education or knowledge of the future had helped me to escape. Yet in a few years an illiterate runaway named Harriet Tubman would make nineteen trips into this country and lead three hundred fugitives to freedom.\"",
 },
 {
     "title" : "Daughters of Sparta",
@@ -80,7 +87,8 @@ books =
     "yearOfPub" : 2021,
     "rating" : 3,
     "url" : "https://www.goodreads.com/book/show/57423631-daughters-of-sparta",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1616478164i/57423631.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1616478164i/57423631.jpg",
+    "quote" : "\"Sometimes we must be led by duty, and sometimes by what is right....The trick is to know when these things are the same, and when they are not.\"",
 },
 {
     "title" : "Adventure in Greece: A Bilingual Story for Advanced Beginners to Intermediate Level",
@@ -90,17 +98,19 @@ books =
     "yearOfPub" : 2022,
     "rating" : 5,
     "url" : "https://www.goodreads.com/book/show/61366605-adventure-in-greece",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1656451218i/61366605.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1656451218i/61366605.jpg",
+    "quote" : "No quote to display at this time",
 },
 {
-    "title" : "Lady Tan’s Circle of Women",
+    "title" : "Lady Tan\'s Circle of Women",
     "author" : "Lisa See",
     "pages" : 368,
     "genre" : ["Historical Fiction", "Fiction", "Historical", "China"],
     "yearOfPub" : 2023,
     "rating" : 5,
     "url" : "https://www.goodreads.com/book/show/62919732-lady-tan-s-circle-of-women",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1683735261i/62919732.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1683735261i/62919732.jpg",
+    "quote" : "\"It takes a lifetime to make a friend, but you can lose one in an hour,\" she recites. \"Life without a friend is life without sun. Life without a friend is death.\"",
 },
 {
     "title" : "Mexican Gothic",
@@ -110,17 +120,19 @@ books =
     "yearOfPub" : 2020,
     "rating" : 4,
     "url" : "https://www.goodreads.com/book/show/53152636-mexican-gothic",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1607462569i/53152636.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1607462569i/53152636.jpg",
+    "quote" : "\"It was easy to kiss someone when it didn\'t matter; it was more difficult when it might be meaningful.\"",
 },
 {
-    "title" : "Can't We Talk about Something More Pleasant?",
+    "title" : "Can\'t We Talk about Something More Pleasant?",
     "author" : "Roz Chast",
     "pages" : 228,
     "genre" : ["Graphic Novels", "Memoir"],
     "yearOfPub" : 2014,
     "rating" : 4,
     "url" : "https://www.goodreads.com/book/show/18594409-can-t-we-talk-about-something-more-pleasant",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1421087235i/18594409.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1421087235i/18594409.jpg",
+    "quote" : "\"I don\'t want to be a PULSATING PIECE OF PROTOPLASM!\"",
 },
 {
     "title" : "6 Times We Almost Kissed [and One Time We Did]",
@@ -130,7 +142,8 @@ books =
     "yearOfPub" : 2023,
     "rating" : 4,
     "url" : "https://www.goodreads.com/book/show/61030513-6-times-we-almost-kissed-and-one-time-we-did",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1652690535i/61030513.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1652690535i/61030513.jpg",
+    "quote" : "\"I can, in fact, be mad at you and help you at the same time. It\'s called being emotionally nuanced.\"",
 },
 {
     "title" : "Y: The Last Man Omnibus",
@@ -140,7 +153,8 @@ books =
     "yearOfPub" : 2008,
     "rating" : 5,
     "url" : "https://www.goodreads.com/book/show/44512946-y",
-    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1572996287i/44512946.jpg"
+    "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1572996287i/44512946.jpg",
+    "quote" : "No quote to display at this time",
 }
 ]
 
