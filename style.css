@@ -1,3 +1,9 @@
+/* ************* Global Styling ************* */
+:root{
+    --blueBg: rgb(29, 215, 200);
+    --blueNavyButton: rgb(0, 57, 132);
+}
+
 html,
 body {
     margin: 0;
@@ -5,21 +11,50 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+button {
+    text-align: center;
+    background-color: var(--blueNavyButton);
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.375rem;
+    cursor: pointer;
+    margin: 5px;
+}
+
+form, textarea, input, label, select{
+    font-size: 1.5rem;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* ************* Start of Individual Class Styling ************* */
 .main-header {
-    background-color: rgb(29, 215, 200);
+    background-color: var(--blueBg);
     padding-bottom: 10px;
-    font-family: "Josefin Sans", sans-serif;
 }
 
 .title {
     text-align: center;
     margin: 0;
+    padding-top: 35px;
     font-size: 6em;
-    font-family: "Helvetica";
+    font-family: "Josefin Sans", sans-serif;
     font-weight: normal;
     color: rgb(0, 0, 0);
 }
 
+.searchResults {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    font-style: italic;
+}
+
+/* ************* CARD Styling ************* */
 #card-container {
     display: flex;
     flex-wrap: wrap;
@@ -44,49 +79,19 @@ body {
 .card-content h2 {
     margin-top: 0;
     font-size: 1.75rem;
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-}
-
-.footer {
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, .3);
-    padding: 10px;
-}
-
-button {
     text-align: center;
-    background-color: #666;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 40px;
-    border-radius: 10px;
-    color: white;
-    font-size: 1.375rem;
-    cursor: pointer;
-    margin: 5px;
-}
-
-/* ************************************************************** */
-/* ***************MY CSS FOR NEW CLASSES STARTS HERE************* */
-/* ************************************************************** */
-
-.searchResults {
-    width: 100%;
-    font-size: 1.5rem;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
 }
 
 .card-content h3{
     font-size: 1.5rem;
     font-weight: 400;
+    text-align: right;
+    /* font-style: italic; */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
 }
 
 .rating{
@@ -99,13 +104,17 @@ ul li{
     font-size: 1.25rem;
 }
 
+/* ************* FORM Styling ************* */
 .addCard{
     padding: 2rem;
     font-size: 1.5rem;
 }
 
-form, textarea, input, label, select{
-    font-size: 1.5rem;
-    padding: 5px;
-    margin: 5px;
+/* ************* Footer Styling ************* */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--blueBg);
+    padding: 10px;
 }
