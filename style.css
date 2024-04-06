@@ -68,3 +68,15 @@ button {
     cursor: pointer;
     margin: 5px;
 }
+
+/* ************************************************************** */
+/* ***************MY CSS FOR NEW CLASSES STARTS HERE************* */
+/* ************************************************************** */
+.addCard{
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+form, textarea, input{
+    font-size: 2rem;
+}

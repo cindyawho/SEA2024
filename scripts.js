@@ -23,10 +23,17 @@
  * 
  */
 
-
 const FRESH_PRINCE_URL = "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_Prince_S1_DVD.jpg";
 const CURB_POSTER_URL = "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
-const EAST_LOS_HIGH_POSTER_URL = "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
+const EAST_LOS_HIGH_POSTER_URL = "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";   
+const GOOD_PLACE_URL = "https://www.oficialhostgeek.com.br/wp-content/uploads/2020/02/zzzz-2-scaled.jpg";
+
+let urlArray = [
+    FRESH_PRINCE_URL,
+    CURB_POSTER_URL,
+    EAST_LOS_HIGH_POSTER_URL, 
+    GOOD_PLACE_URL
+]
 
 // This is an array of strings (TV show titles)
 let titles = [
@@ -51,14 +58,7 @@ function showCards() {
         // This part of the code doesn't scale very well! After you add your
         // own data, you'll need to do something totally different here.
         //~~~~~~~~~~~~~~~~~~~~~~Might be a good idea to use mapping function here~~~~~~~~~~~~~~~~~
-        let imageURL = "";
-        if (i == 0) {
-            imageURL = FRESH_PRINCE_URL;
-        } else if (i == 1) {
-            imageURL = CURB_POSTER_URL;
-        } else if (i == 2) {
-            imageURL = EAST_LOS_HIGH_POSTER_URL;
-        }
+        let imageURL = urlArray[i];
 
         const nextCard = templateCard.cloneNode(true); // Copy the template card
         editCardContent(nextCard, title, imageURL); // Edit title and image
@@ -79,7 +79,7 @@ function editCardContent(card, newTitle, newImageURL) {
     // You can use console.log to help you debug!
     // View the output by right clicking on your website,
     // select "Inspect", then click on the "Console" tab
-    console.log("new card:", newTitle, "- html: ", card);
+    // console.log("new card:", newTitle, "- html: ", card);
 }
 
 // This calls the addCards() function when the page is first loaded
@@ -93,4 +93,13 @@ function quoteAlert() {
 function removeLastCard() {
     titles.pop(); // Remove last item in titles array
     showCards(); // Call showCards again to refresh
+}
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~   MY NEW FUNCTIONS START HERE   ~~~~~~~~~~~~~~~~~~~~~~~~
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+function addCard(){
+    event.preventDefault(); //prevents the refreshing of page- used in a previous project of mine
+    console.log(document.getElementById("title").value);
+    console.log(document.getElementById("url").value);
 }
