@@ -1,5 +1,6 @@
 // Array of JSON objects for books
-books =
+// export default
+books = 
 [
 {
     "title" : "Percy Jackson: The Lightning Thief",
@@ -141,7 +142,7 @@ books =
     "url" : "https://www.goodreads.com/book/show/44512946-y",
     "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1572996287i/44512946.jpg"
 }
-];
+]
 
 //Template for new addition to data
 // {
