@@ -284,15 +284,40 @@ function sortByTitleZA(){
 
 //Filtering Functions
 function filterFunction(){
+    for(let i = 0; i < books.length; i++){
+        bookDiv = document.getElementById("bookNum" + i.toString());
+        bookDiv.style.display = "flex";
+    }
+    let userSelect = document.getElementById("filterSelect").value;
+    // console.log(userSelect);
     let userInput = document.getElementById("filter").value;
     // console.log(userInput);
-    for(let i = 0; i < books.length; i++){
-        if(!books[i].title.match(userInput)){
-            bookDiv = document.getElementById("bookNum" + i.toString());
-            // console.log(bookDiv);
-            bookDiv.style.display = "none";
+    if(userSelect == "title"){
+        for(let i = 0; i < books.length; i++){
+            // let ifCondition = "!books[" + i.toString() + "]." + userSelect + ".match(" + userInput + ")";
+            // console.log(ifCondition);
+            if(!books[i].title.match(userInput)){
+                bookDiv = document.getElementById("bookNum" + i.toString());
+                // console.log(bookDiv);
+                bookDiv.style.display = "none";
+            }
         }
-    }
+    } else if (userSelect == "author"){
+        for(let i = 0; i < books.length; i++){
+            if(!books[i].author.match(userInput)){
+                bookDiv = document.getElementById("bookNum" + i.toString());
+                bookDiv.style.display = "none";
+            }
+        }
+    } //else if(userSelect == "genre"){
+    //     for(let i = 0; i < books.length; i++){
+    //         let size = books[i]
+    //         if(!books[i].genre.match(userInput)){
+    //             bookDiv = document.getElementById("bookNum" + i.toString());
+    //             bookDiv.style.display = "none";
+    //         }
+    //     }
+    // }
 }
 function filterResetFunction(){
     for(let i = 0; i < books.length; i++){
