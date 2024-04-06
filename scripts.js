@@ -39,16 +39,17 @@ function showCards() {
         let rating = books[i].rating;
         let yearOfPub = books[i].yearOfPub;
         let genres = books[i].genre;
+        let link = books[i].url;
 
         const nextCard = templateCard.cloneNode(true); // Copy the template card
         let tempID = "bookNum" + i.toString();
         nextCard?.setAttribute("id", tempID); //Add id with number to edit styles during filtering functions
-        editCardContent(nextCard, title, imageURL, author, pages, rating, yearOfPub, genres); // Edit title, image, author, pages, rating, yoP, genres
+        editCardContent(nextCard, title, imageURL, author, pages, rating, yearOfPub, genres, link); // Edit title, image, author, pages, rating, yoP, genres
         cardContainer.appendChild(nextCard); // Add new card to the container
     }
 }
 
-function editCardContent(card, newTitle, newImageURL, newAuthor, newPages, newRating, newYearOfPub, newGenres) {
+function editCardContent(card, newTitle, newImageURL, newAuthor, newPages, newRating, newYearOfPub, newGenres, newLink) {
     card.style.display = "block";
 
     const cardHeader = card.querySelector("h2");
@@ -60,6 +61,8 @@ function editCardContent(card, newTitle, newImageURL, newAuthor, newPages, newRa
     const cardImage = card.querySelector("img");
     cardImage.src = newImageURL;
     cardImage.alt = newTitle + " Poster";
+    const cardLink = card.querySelector(".imgLink");
+    cardLink.href = newLink;
 
     // console.log("new card:", newTitle, "- html: ", card);
 
