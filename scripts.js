@@ -34,24 +34,72 @@ function showCards() {
         let title = books[i].title;
         //~~~~~~~~~~~~~~~~~~~~~~Might be a good idea to use mapping function here~~~~~~~~~~~~~~~~~
         let imageURL = books[i].image;
+        let author = books[i].author;
+        let pages = books[i].pages;
+        let rating = books[i].rating;
+        let yearOfPub = books[i].yearOfPub;
+        let genres = books[i].genre;
 
         const nextCard = templateCard.cloneNode(true); // Copy the template card
-        editCardContent(nextCard, title, imageURL); // Edit title and image
+        editCardContent(nextCard, title, imageURL, author, pages, rating, yearOfPub, genres); // Edit title, image, author, pages, rating, yoP, genres
         cardContainer.appendChild(nextCard); // Add new card to the container
     }
 }
 
-function editCardContent(card, newTitle, newImageURL) {
+function editCardContent(card, newTitle, newImageURL, newAuthor, newPages, newRating, newYearOfPub, newGenres) {
     card.style.display = "block";
 
     const cardHeader = card.querySelector("h2");
     cardHeader.textContent = newTitle;
+
+    const cardAuthor = card.querySelector("h3");
+    cardAuthor.textContent = newAuthor;
 
     const cardImage = card.querySelector("img");
     cardImage.src = newImageURL;
     cardImage.alt = newTitle + " Poster";
 
     // console.log("new card:", newTitle, "- html: ", card);
+
+    //Creating a list item to add page number
+    const cardPages = card.querySelector("ul");
+    const listElement = document.createElement("LI");
+    const liText = document.createTextNode(newPages + " pages");
+    listElement.appendChild(liText);
+    cardPages.appendChild(listElement);
+    //List will include year of publication
+    const listElement2 = document.createElement("LI");
+    const liText2 = document.createTextNode("Year of Publication: " + newYearOfPub);
+    listElement2.appendChild(liText2);
+    cardPages.appendChild(listElement2);
+    //List will include genres
+    const listElement3 = document.createElement("LI");
+    let genreText = "";
+    for(let i = 0; i < newGenres.length; i++){
+        if(i == newGenres.length - 1){
+            genreText = genreText + "and "
+        }
+        genreText = genreText + newGenres[i];
+        if(i != newGenres.length-1){
+            genreText = genreText + ", ";
+        } 
+    }
+    const liText3 = document.createTextNode(genreText);
+    listElement3.appendChild(liText3);
+    cardPages.appendChild(listElement3);
+
+    //Adding rating to card
+    const cardRating = card.querySelector("p");
+    let starRating = "";
+    for(let i = 0; i < newRating; i++){
+        starRating = starRating + "*"; //~~~~~~~~~~~~~~~~Maybe use an image of a star emoji and format it using css later
+    }
+    cardRating.textContent = starRating;
+    //Descriptor of rating
+    const ratingParagraph = document.createElement("p");
+    const textNode = document.createTextNode(newRating + " Stars");
+    ratingParagraph.append(textNode);
+    cardRating.appendChild(ratingParagraph);
 }
 
 // This calls the addCards() function when the page is first loaded
