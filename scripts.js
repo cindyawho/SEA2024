@@ -165,7 +165,7 @@ function addCard(){
         newBook["image"] = newImage;
     newQuote = document.getElementById("quote").value;
         newBook["quote"] = newQuote;
-    console.log(newBook);
+    // console.log(newBook);
     books.push(newBook);
     showCards();
 }
@@ -287,6 +287,7 @@ function sortByTitleZA(){
 
 //Filtering Functions
 function filterFunction(){
+    let searchResults = 0;
     for(let i = 0; i < books.length; i++){
         bookDiv = document.getElementById("bookNum" + i.toString());
         bookDiv.style.display = "flex";
@@ -304,6 +305,8 @@ function filterFunction(){
                 bookDiv = document.getElementById("bookNum" + i.toString());
                 // console.log(bookDiv);
                 bookDiv.style.display = "none";
+            } else{
+                searchResults++;
             }
         }
     } else if (userSelect == "author"){
@@ -312,6 +315,8 @@ function filterFunction(){
             if(!lowerData.match(userInput)){
                 bookDiv = document.getElementById("bookNum" + i.toString());
                 bookDiv.style.display = "none";
+            } else{
+                searchResults++;
             }
         }
     } else if(userSelect == "genre"){
@@ -328,13 +333,30 @@ function filterFunction(){
             if(!checkMatch){
                 bookDiv = document.getElementById("bookNum" + i.toString());
                 bookDiv.style.display = "none";
+            } else{
+                searchResults++;
             }
         }
     }
+    const resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "inline-block";
+    const resultsNumber = document.getElementById("resultsNumber");
+    resultsNumber.innerText = searchResults;
 }
+// If user hits Enter, the filter function will happen
+let filterInput = document.getElementById("filter");
+filterInput.addEventListener("keypress", function(event){
+    if(event.key == "Enter"){
+        event.preventDefault();
+        filterFunction();
+    }
+});
+// Brings back all cards to the screen
 function filterResetFunction(){
     for(let i = 0; i < books.length; i++){
         bookDiv = document.getElementById("bookNum" + i.toString());
         bookDiv.style.display = "flex";
     }
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
 }

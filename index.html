@@ -5,12 +5,14 @@
     <title>2024 Books | Home</title>
     <meta name="description" content="Books I Have Read in 2024">
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="data.js"></script>
-    <script type="text/javascript" src="scripts.js"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header" id="main-header">
         <h1 class="title">Books I Have Read in 2024</h1>
     </header>
     <div class="sortingSection">
@@ -44,6 +46,9 @@
         <button onclick="sortByRatingLH();" id="sortRatingLH">
             Sort By Rating ↓
         </button>
+        <a href="#addCard"><button>
+            Add a Book
+        </button></a>
         <br>
         <label for="filter">Search by: </label>
         <select name="filterSelect" id="filterSelect" size="1">
@@ -54,6 +59,9 @@
         <input type="text" id="filter" name="filter" class="filter">
         <button class="filterButton" onclick="filterFunction()">Find</button>
         <button class="filterResetButton" onclick="filterResetFunction()">Reset</button>
+    </div>
+    <div class="searchResults" style="display: none;">
+        <p class="searchResultsDesc"><span class="resultsNumber" id="resultsNumber"></span> Search Results Found!</p>
     </div>
     <div id="card-container">
         
@@ -69,8 +77,8 @@
         </div>
     </div>
 
-    <div class="addCard">
-        <p class="addCardDescription">Hello! To add a card, please fill out the following information, then click "Add Card".</p>
+    <div class="addCard" id="addCard">
+        <p class="addCardDescription">Hello! To add a book, please fill out the following information, then click "Add Card".</p>
         <form action="" class="addCardForm">
             <label for="title">Book Title: </label>
                 <input type="text" id="title" name="title" class="inputTitle" required><br>
@@ -124,7 +132,12 @@
         <button onclick="removeLastCard();">
             Remove A Card!
         </button>
+        <a href="#main-header"><button>
+            Back to the Top
+        </button></a>
     </div>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
 </body>
 
 </html>
