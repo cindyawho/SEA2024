@@ -27,12 +27,14 @@ const FRESH_PRINCE_URL = "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_P
 const CURB_POSTER_URL = "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
 const EAST_LOS_HIGH_POSTER_URL = "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";   
 const GOOD_PLACE_URL = "https://www.oficialhostgeek.com.br/wp-content/uploads/2020/02/zzzz-2-scaled.jpg";
+const PERCY_POSTER_URL = "https://i0.wp.com/books.disney.com/content/uploads/2013/09/9780786856299.jpg?fit=405%2C612&ssl=1";
 
 let urlArray = [
     FRESH_PRINCE_URL,
     CURB_POSTER_URL,
     EAST_LOS_HIGH_POSTER_URL, 
-    GOOD_PLACE_URL
+    GOOD_PLACE_URL,
+    PERCY_POSTER_URL
 ]
 
 // This is an array of strings (TV show titles)
@@ -40,7 +42,8 @@ let titles = [
     "Fresh Prince of Bel Air",
     "Curb Your Enthusiasm",
     "East Los High",
-    "The Good Place" //testing card function
+    "The Good Place", //testing card function
+    "Percy Jackson and The Lightning Thief"
 ];
 // Your final submission should have much more data than this, and 
 // you should use more than just an array of strings to store it all.
@@ -100,6 +103,11 @@ function removeLastCard() {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function addCard(){
     event.preventDefault(); //prevents the refreshing of page- used in a previous project of mine
-    console.log(document.getElementById("title").value);
-    console.log(document.getElementById("url").value);
+    // console.log(document.getElementById("title").value);
+    // console.log(document.getElementById("url").value);
+    newTitle = document.getElementById("title").value;
+    titles.push(newTitle);
+    newURL = document.getElementById("url").value;
+    urlArray.push(newURL);
+    showCards();
 }
