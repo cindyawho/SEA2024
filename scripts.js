@@ -291,12 +291,15 @@ function filterFunction(){
     let userSelect = document.getElementById("filterSelect").value;
     // console.log(userSelect);
     let userInput = document.getElementById("filter").value;
+    userInput = userInput.toLowerCase();
     // console.log(userInput);
     if(userSelect == "title"){
         for(let i = 0; i < books.length; i++){
             // let ifCondition = "!books[" + i.toString() + "]." + userSelect + ".match(" + userInput + ")";
             // console.log(ifCondition);
-            if(!books[i].title.match(userInput)){
+            let lowerData = books[i].title.toLowerCase();
+            // console.log(lowerData);
+            if(!lowerData.match(userInput)){
                 bookDiv = document.getElementById("bookNum" + i.toString());
                 // console.log(bookDiv);
                 bookDiv.style.display = "none";
@@ -304,7 +307,8 @@ function filterFunction(){
         }
     } else if (userSelect == "author"){
         for(let i = 0; i < books.length; i++){
-            if(!books[i].author.match(userInput)){
+            let lowerData = books[i].author.toLowerCase();
+            if(!lowerData.match(userInput)){
                 bookDiv = document.getElementById("bookNum" + i.toString());
                 bookDiv.style.display = "none";
             }
