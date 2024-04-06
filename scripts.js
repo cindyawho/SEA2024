@@ -211,40 +211,30 @@ function sortByPagesLH() {
     showCards();
 }
 function sortByPagesHL() {
-    // document.getElementById("sortPagesLH").style.display = "inline-block";
-    // document.getElementById("sortPagesHL").style.display = "none";
     books.sort(function(a, b){
         return b.pages - a.pages;
     });
     showCards();
 }
 function sortByYearLH() {
-    // document.getElementById("sortYearHL").style.display = "inline-block";
-    // document.getElementById("sortYearLH").style.display = "none";
     books.sort(function(a, b){
         return a.yearOfPub - b.yearOfPub;
     });
     showCards();
 }
 function sortByYearHL() {
-    // document.getElementById("sortYearLH").style.display = "inline-block";
-    // document.getElementById("sortYearHL").style.display = "none";
     books.sort(function(a, b){
         return b.yearOfPub - a.yearOfPub;
     });
     showCards();
 }
 function sortByRatingLH() {
-    // document.getElementById("sortRatingHL").style.display = "inline-block";
-    // document.getElementById("sortRatingLH").style.display = "none";
     books.sort(function(a, b){
         return a.rating - b.rating;
     });
     showCards();
 }
 function sortByRatingHL() {
-    // document.getElementById("sortRatingHL").style.display = "none";
-    // document.getElementById("sortRatingLH").style.display = "inline-block";
     books.sort(function(a, b){
         return b.rating - a.rating;
     });
@@ -253,8 +243,6 @@ function sortByRatingHL() {
 
 //Creating sorting functions by for Author and Title
 function sortByAuthorAZ(){
-    // document.getElementById("sortAuthorAZ").style.display = "none";
-    // document.getElementById("sortAuthorZA").style.display = "inline-block";
     books.sort(function(a, b){
         // console.log("a: " + a.author);
         // console.log("b: " + b.author);
@@ -270,8 +258,6 @@ function sortByAuthorAZ(){
     showCards();
 }
 function sortByAuthorZA(){
-    // document.getElementById("sortAuthorZA").style.display = "none";
-    // document.getElementById("sortAuthorAZ").style.display = "inline-block";
     books.sort(function(a, b){
         if(a.author < b.author){
             return 1;
@@ -285,8 +271,6 @@ function sortByAuthorZA(){
 }
 
 function sortByTitleAZ(){
-    // document.getElementById("sortTitleAZ").style.display = "none";
-    // document.getElementById("sortTitleZA").style.display = "inline-block";
     books.sort(function(a, b){
         if(a.title < b.title){
             return -1;
@@ -299,8 +283,6 @@ function sortByTitleAZ(){
     showCards();
 }
 function sortByTitleZA(){
-    // document.getElementById("sortTitleZA").style.display = "none";
-    // document.getElementById("sortTitleAZ").style.display = "inline-block";
     books.sort(function(a, b){
         if(a.title < b.title){
             return 1;

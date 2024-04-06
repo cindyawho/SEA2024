@@ -16,45 +16,47 @@
     <header class="main-header" id="main-header">
         <h1 class="title">Books I've Read in 2024</h1>
     </header>
-    <div class="sortingSection">
-        <label for="sort">Sort by: </label>
-        <select name="sortSelect" id="sortSelect" size="1" onclick="sortCategoryCheck()">
-            <option></option>
-            <option value="titleAZ">Title: A - Z</option>
-            <option value="titleZA">Title: Z - A</option>
-            <option value="authorAZ">Author: A - Z</option>
-            <option value="authorZA">Author: Z - A</option>
-            <option value="pagesLH">Pages: Low to High</option>
-            <option value="pagesHL">Pages: High to Low</option>
-            <option value="yearOfPubLH">Year of Publication: Old to New</option>
-            <option value="yearOfPubHL">Year of Publication: New to Old</option>
-            <option value="ratingLH">Rating: Low to High</option>
-            <option value="ratingHL">Rating: High to Old</option>
-        </select>
-        <a href="#addCard"><button class="addCardLinkButton">
-            Add a Book
-        </button></a>
+    <div class="dataOrganization">
+        <div class="sortingSection filterSection">
+            <label for="filter">Search by: </label>
+            <select name="filterSelect" id="filterSelect" size="1" onchange="filterCategoryCheck()">
+                <option value="title">Title</option>
+                <option value="author">Author</option>
+                <option value="genre">Genre</option>
+            </select>
+            <select name="genre" id="genre" class="inputGenre" size="1" style="display: none;">
+                <option value="mythology">Mythology</option>
+                <option value="fantasy">Fantasy</option>
+                <option value="mystery">Mystery</option>
+                <option value="historical fiction">Historical Fiction</option>
+                <option value="nonfiction">Nonfiction</option>
+                <option value="science fiction">Science Fiction</option>
+                <option value="romance">Romance</option>
+            </select>
+            <input type="text" id="filter" name="filter" class="filter">
+            <button class="filterButton" onclick="filterFunction()">Find</button>
+            <button class="filterResetButton" onclick="filterResetFunction()">Reset</button>
+        </div>
+        <div class="sortingSection">
+            <label for="sort">Sort by: </label>
+            <select name="sortSelect" id="sortSelect" size="1" onclick="sortCategoryCheck()">
+                <option></option>
+                <option value="titleAZ">Title: A - Z</option>
+                <option value="titleZA">Title: Z - A</option>
+                <option value="authorAZ">Author: A - Z</option>
+                <option value="authorZA">Author: Z - A</option>
+                <option value="pagesLH">Pages: Low to High</option>
+                <option value="pagesHL">Pages: High to Low</option>
+                <option value="yearOfPubLH">Year of Publication: Old to New</option>
+                <option value="yearOfPubHL">Year of Publication: New to Old</option>
+                <option value="ratingLH">Rating: Low to High</option>
+                <option value="ratingHL">Rating: High to Old</option>
+            </select>
+        </div>
     </div>
-    <div class="sortingSection filterSection">
-        <label for="filter">Search by: </label>
-        <select name="filterSelect" id="filterSelect" size="1" onchange="filterCategoryCheck()">
-            <option value="title">Title</option>
-            <option value="author">Author</option>
-            <option value="genre">Genre</option>
-        </select>
-        <select name="genre" id="genre" class="inputGenre" size="1" style="display: none;">
-            <option value="mythology">Mythology</option>
-            <option value="fantasy">Fantasy</option>
-            <option value="mystery">Mystery</option>
-            <option value="historical fiction">Historical Fiction</option>
-            <option value="nonfiction">Nonfiction</option>
-            <option value="science fiction">Science Fiction</option>
-            <option value="romance">Romance</option>
-        </select>
-        <input type="text" id="filter" name="filter" class="filter">
-        <button class="filterButton" onclick="filterFunction()">Find</button>
-        <button class="filterResetButton" onclick="filterResetFunction()">Reset</button>
-    </div>
+    <a href="#addCard" class="addCardButton"><button class="addCardLinkButton">
+        Add a Book
+    </button></a>
     <div class="searchResults" style="display: none;">
         <p class="searchResultsDesc"><span class="resultsNumber" id="resultsNumber"></span> Search Results Found!</p>
     </div>
