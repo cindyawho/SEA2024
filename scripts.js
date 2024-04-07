@@ -385,3 +385,24 @@ function filterResetFunction(){
     resultsDiv = document.querySelector(".searchResults");
     resultsDiv.style.display = "none";
 }
+
+//see Quote from book
+function seeQuote(thisButton){
+    // console.log(thisButton);
+    let cardContainer = thisButton.parentNode.parentNode;
+    let titleText =  cardContainer.childNodes[1].innerText;
+    console.log(titleText);
+    let i = 0;
+    for(i; i < books.length; i++){
+        // console.log(books[i].title);
+        if(books[i].title == titleText){
+            break;
+        }
+    }
+    alert(books[i].quote + "\n  From the book: " + books[i].title);
+}
+
+//Delete a card from list
+function removeACard(){
+
+}
