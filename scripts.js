@@ -391,7 +391,7 @@ function seeQuote(thisButton){
     // console.log(thisButton);
     let cardContainer = thisButton.parentNode.parentNode;
     let titleText =  cardContainer.childNodes[1].innerText;
-    console.log(titleText);
+    // console.log(titleText);
     let i = 0;
     for(i; i < books.length; i++){
         // console.log(books[i].title);
@@ -399,7 +399,12 @@ function seeQuote(thisButton){
             break;
         }
     }
-    alert(books[i].quote + "\n  From the book: " + books[i].title);
+    // alert(books[i].quote + "\n  From the book: " + books[i].title);
+    // console.log(thisButton.parentNode.parentNode.childNodes[13]);
+    ownAlert = thisButton.parentNode.parentNode.childNodes[15];
+    // console.log(ownAlert);
+    ownAlert.childNodes[5].innerText = books[i].quote;
+    ownAlert.style.display = "inline-block";
 }
 
 //Delete a card from list
