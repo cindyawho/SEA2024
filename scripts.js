@@ -408,6 +408,19 @@ function seeQuote(thisButton){
 }
 
 //Delete a card from list
-function removeACard(){
-
+function removeACard(thisButton){
+    let cardContainer = thisButton.parentNode.parentNode;
+    console.log(cardContainer);
+    let titleText =  cardContainer.childNodes[1].innerText;
+    // console.log(titleText);
+    let i = 0;
+    for(i; i < books.length; i++){
+        // console.log(books[i].title);
+        if(books[i].title == titleText){
+            break;
+        }
+    }
+    //tried to use delete at first but since I have an array, splice works
+    books.splice(i, 1);
+    showCards();
 }
