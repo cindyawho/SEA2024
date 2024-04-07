@@ -410,7 +410,7 @@ function seeQuote(thisButton){
 //Delete a card from list
 function removeACard(thisButton){
     let cardContainer = thisButton.parentNode.parentNode;
-    console.log(cardContainer);
+    // console.log(cardContainer);
     let titleText =  cardContainer.childNodes[1].innerText;
     // console.log(titleText);
     let i = 0;
@@ -420,7 +420,9 @@ function removeACard(thisButton){
             break;
         }
     }
-    //tried to use delete at first but since I have an array, splice works
-    books.splice(i, 1);
-    showCards();
+    if(confirm("Are you sure you want to delete this book from the site?")){
+        //tried to use delete at first but since I have an array, splice works
+        books.splice(i, 1);
+        showCards();
+    }
 }
