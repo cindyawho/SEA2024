@@ -101,7 +101,7 @@ function editCardContent(card, newTitle, newImageURL, newAuthor, newPages, newRa
     const cardRating = card.querySelector("p");
     let starRating = "";
     for(let i = 0; i < newRating; i++){
-        starRating = starRating + "★";
+        starRating = starRating + "⭐";
     }
     cardRating.textContent = starRating;
     //Descriptor of rating
