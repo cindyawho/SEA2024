@@ -11,6 +11,17 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.bgImage{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/6742567.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .1;
+    z-index: -5;
+}
+
 button {
     text-align: center;
     background-color: var(--blueNavyButton);
@@ -122,6 +133,7 @@ header {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 5px;
+    background-color: aliceblue;
 }
 
 .card-content {
@@ -195,6 +207,10 @@ ul li{
     padding: 10px;
 }
 
+.footer button{
+    margin: 0 20px 0 20px;
+}
+
 /* Styling for Phone */
 @media (max-width: 55em) {
     .card{
@@ -251,4 +267,11 @@ ul li{
 }
 .w3-panel p{
     font-style: italic;
+}
+
+/* Attribute of Freepik */
+.attribute{
+    position: absolute;
+    right: 0;
+    left: auto;
 }
