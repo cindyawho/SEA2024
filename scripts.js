@@ -203,6 +203,9 @@ function sortByPagesLH() {
     // console.log("In the function sortByPages()!");
     // document.getElementById("sortPagesHL").style.display = "inline-block";
     // document.getElementById("sortPagesLH").style.display = "none";
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         // console.log("a: " + a);
         // console.log("b: " + b);
@@ -211,30 +214,45 @@ function sortByPagesLH() {
     showCards();
 }
 function sortByPagesHL() {
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         return b.pages - a.pages;
     });
     showCards();
 }
 function sortByYearLH() {
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         return a.yearOfPub - b.yearOfPub;
     });
     showCards();
 }
 function sortByYearHL() {
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         return b.yearOfPub - a.yearOfPub;
     });
     showCards();
 }
 function sortByRatingLH() {
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         return a.rating - b.rating;
     });
     showCards();
 }
 function sortByRatingHL() {
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         return b.rating - a.rating;
     });
@@ -243,6 +261,9 @@ function sortByRatingHL() {
 
 //Creating sorting functions by for Author and Title
 function sortByAuthorAZ(){
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         // console.log("a: " + a.author);
         // console.log("b: " + b.author);
@@ -258,6 +279,9 @@ function sortByAuthorAZ(){
     showCards();
 }
 function sortByAuthorZA(){
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         if(a.author < b.author){
             return 1;
@@ -271,6 +295,9 @@ function sortByAuthorZA(){
 }
 
 function sortByTitleAZ(){
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         if(a.title < b.title){
             return -1;
@@ -283,6 +310,9 @@ function sortByTitleAZ(){
     showCards();
 }
 function sortByTitleZA(){
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         if(a.title < b.title){
             return 1;

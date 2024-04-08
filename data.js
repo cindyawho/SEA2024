@@ -99,7 +99,7 @@ books =
     "rating" : 5,
     "url" : "https://www.goodreads.com/book/show/61366605-adventure-in-greece",
     "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1656451218i/61366605.jpg",
-    "quote" : "No quote to display at this time",
+    "quote" : "I was so happy to see my wallet again.",
 },
 {
     "title" : "Lady Tan\'s Circle of Women",
@@ -154,7 +154,7 @@ books =
     "rating" : 5,
     "url" : "https://www.goodreads.com/book/show/44512946-y",
     "image" : "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1572996287i/44512946.jpg",
-    "quote" : "No quote to display at this time",
+    "quote" : "I\'m not afraid of the world. I\'m afraid of a world without you.",
 }
 ]
 
