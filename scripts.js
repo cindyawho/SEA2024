@@ -419,22 +419,32 @@ function filterResetFunction(){
 //see Quote from book
 function seeQuote(thisButton){
     // console.log(thisButton);
-    let cardContainer = thisButton.parentNode.parentNode;
-    let titleText =  cardContainer.childNodes[1].innerText;
-    // console.log(titleText);
-    let i = 0;
-    for(i; i < books.length; i++){
-        // console.log(books[i].title);
-        if(books[i].title == titleText){
-            break;
+    if(thisButton.innerText == "See Quote"){
+        // console.log("User wants to SEE Quote.")
+        thisButton.innerText = "Hide Quote";
+        let cardContainer = thisButton.parentNode.parentNode;
+        let titleText =  cardContainer.childNodes[1].innerText;
+        // console.log(titleText);
+        let i = 0;
+        for(i; i < books.length; i++){
+            // console.log(books[i].title);
+            if(books[i].title == titleText){
+                break;
+            }
         }
+        // alert(books[i].quote + "\n  From the book: " + books[i].title); //Original idea for quote
+        // console.log(thisButton.parentNode.parentNode.childNodes[13]); //changed to 15 because of added lines/comment even
+        ownAlert = thisButton.parentNode.parentNode.childNodes[15];
+        // console.log(ownAlert);
+        ownAlert.childNodes[5].innerText = books[i].quote;
+        ownAlert.style.display = "inline-block";
+    } else{
+        // console.log("User wants to HIDE Quote.")
+        thisButton.innerText = "See Quote";
+        ownAlert = thisButton.parentNode.parentNode.childNodes[15];
+        ownAlert.style.display = "none";
     }
-    // alert(books[i].quote + "\n  From the book: " + books[i].title);
-    // console.log(thisButton.parentNode.parentNode.childNodes[13]);
-    ownAlert = thisButton.parentNode.parentNode.childNodes[15];
-    // console.log(ownAlert);
-    ownAlert.childNodes[5].innerText = books[i].quote;
-    ownAlert.style.display = "inline-block";
+    
 }
 
 //Delete a card from list
