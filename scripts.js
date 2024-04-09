@@ -446,6 +446,12 @@ function seeQuote(thisButton){
     }
     
 }
+//if User closes quote with the x button
+function closeQuote(thisButton){
+    thisButton.parentElement.style.display='none';
+    // console.log(thisButton.parentNode.previousElementSibling.childNodes[1].innerText);
+    thisButton.parentNode.previousElementSibling.childNodes[1].innerText = "See Quote";
+}
 
 //Delete a card from list
 function removeACard(thisButton){
