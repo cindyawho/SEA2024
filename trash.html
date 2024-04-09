@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>2024 Books | Home</title>
+    <meta name="description" content="Books I Have Read in 2024">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bgImageTrash" style="position:absolute; z-index:-5; opacity: 0.2;filter: grayscale(100%);"><img src="./assets/6742567.jpg" alt="library books"></div>
+    
+    <div id="card-container">
+        
+    </div>
+    <div class="card" style="display: none;">
+        <div class="card-content">
+            <h2 class="bookTitle">Book Title</h2>
+            <h3 class="bookAuthor">Author</h3>
+            <a href="" class="imgLink" target="_blank"><img src="" alt="Book Poster"></a>
+            <ul>
+            </ul>
+            <p class="rating"></p>
+            <div class="cardButtons">
+                <button class="seeQuote" id="seeQuote" onclick="seeQuote(this)">See Quote</button>
+                <button class="removeCard recoverCard" id="recoverCard" onclick="recoverABook(this)">Recover</button>
+            </div>
+            <!-- Thank you W-3 Schools: Closing Alerts -->
+            <div class="w3-panel" style="display: none;">
+                <span onclick="this.parentElement.style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+                <h4 class="w3-panel-quote">Quote: </h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="trashData.js"></script>
+    <script type="text/javascript" src="trashScript.js"></script>
+</body>
+</html>

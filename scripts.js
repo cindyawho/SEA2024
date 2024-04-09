@@ -1,27 +1,13 @@
-/**
- * Data Catalog Project Starter Code - SEA Stage 2
- *
- * This file is where you should be doing most of your work. You should
- * also make changes to the HTML and CSS files, but we want you to prioritize
- * demonstrating your understanding of data structures, and you'll do that
- * with the JavaScript code you write in this file.
- * 
- * The comments in this file are only to help you learn how the starter code
- * works. The instructions for the project are in the README. That said, here
- * are the three things you should do first to learn about the starter code:
- * - 1 - Change something small in index.html or style.css, then reload your 
- *    browser and make sure you can see that change. 
- * - 2 - On your browser, right click anywhere on the page and select
- *    "Inspect" to open the browser developer tools. Then, go to the "console"
- *    tab in the new window that opened up. This console is where you will see
- *    JavaScript errors and logs, which is extremely helpful for debugging.
- *    (These instructions assume you're using Chrome, opening developer tools
- *    may be different on other browsers. We suggest using Chrome.)
- * - 3 - Add another string to the titles array a few lines down. Reload your
- *    browser and observe what happens. You should see a fourth "card" appear
- *    with the string you added to the array, but a broken image.
- * 
- */
+window.onload = function() {
+    // Get the array from localStorage, had to JSON.parse bc it was an array of JSON objects
+    if(JSON.parse(localStorage.getItem('accessRecovered'))){
+        let value = JSON.parse(localStorage.getItem('accessRecovered'));
+        books = value;
+        showCards();
+    } else {
+        showCards();
+    }
+};
 
 // This function adds cards the page to display the data in the array
 function showCards() {
@@ -31,6 +17,7 @@ function showCards() {
     
     //Now accesses my data.js file which has the books array of objects! Yay!
     for (let i = 0; i < books.length; i++) {
+        console.log(books[i].title);
         let title = books[i].title;
         //~~~~~~~~~~~~~~~~~~~~~~Might be a good idea to use mapping function here~~~~~~~~~~~~~~~~~
         let imageURL = books[i].image;
@@ -114,7 +101,7 @@ function editCardContent(card, newTitle, newImageURL, newAuthor, newPages, newRa
 }
 
 // This calls the addCards() function when the page is first loaded
-document.addEventListener("DOMContentLoaded", showCards);
+// document.addEventListener("DOMContentLoaded", showCards);
 
 function quoteAlert() {
     // console.log("Quote Alert Button Clicked!")
@@ -128,6 +115,7 @@ function quoteAlert() {
 
 function removeLastCard() {
     books.pop(); // Remove last item in titles array
+    localStorage.setItem('accessRecovered', JSON.stringify(books));
     showCards(); // Call showCards again to refresh
 }
 
@@ -169,6 +157,7 @@ function addCard(){
         newBook["quote"] = newQuote;
     // console.log(newBook);
     books.push(newBook);
+    localStorage.setItem('accessRecovered', JSON.stringify(books));
     showCards();
 }
 
@@ -462,7 +451,23 @@ function removeACard(thisButton){
     }
     if(confirm("Are you sure you want to delete this book from the site?")){
         //tried to use delete at first but since I have an array, splice works
+        deleteBook(i); //add the book to the deletedBooks array using the delete book function
         books.splice(i, 1);
+        localStorage.setItem('accessRecovered', JSON.stringify(books));
         showCards();
     }
 }
+
+// Playing Around with the idea of creating a trash for deleted books to undo any accidental deletions
+// In the context of a catalog of my books, I can expand this idea to keep track of what books I lend out
+function deleteBook(bookIndex){
+    // console.log(books[bookIndex]);
+    deletedBooks.push(books[bookIndex]);
+    localStorage.setItem('accessTrash', JSON.stringify(deletedBooks));
+    // window.location.href ='trash.html';
+}
+
+// function accessTrash(){
+//     console.log(deletedBooks);
+//     // Switching to href to access trash
+// }
