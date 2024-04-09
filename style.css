@@ -35,6 +35,7 @@ button {
     font-size: clamp(0.75rem, 0.62rem + 0.69vw, 1.4rem);
     cursor: pointer;
     margin: 5px;
+    transition: 250ms ease-in-out;
 }
 
 button:hover{
@@ -48,6 +49,7 @@ form, textarea, input, label, select{
     padding: 5px;
     margin: 5px;
     border-radius: 10px;
+    transition: 250ms ease-in-out;
 }
 
 select:hover{
