@@ -215,6 +215,9 @@ ul li{
 .footer button{
     margin: 20px;
 }
+.footer button:hover{
+    outline: 1px solid black;
+}
 
 /* Styling for Phone */
 @media (max-width: 55em) {
