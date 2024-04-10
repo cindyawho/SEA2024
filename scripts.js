@@ -136,6 +136,8 @@ function removeLastCard() {
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function addCard(){
     event.preventDefault(); //prevents the refreshing of page- used in a previous project of mine
+    resultsDiv = document.querySelector(".searchResults"); //hide search results
+    resultsDiv.style.display = "none";
     newBook = [];
     newTitle = document.getElementById("title").value;
         newBook["title"] = newTitle;
