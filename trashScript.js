@@ -1,8 +1,8 @@
 window.onload = function() {
     // Get the array from localStorage, had to JSON.parse bc it was an array of JSON objects
-    var value = JSON.parse(localStorage.getItem('accessTrash'));
-    // console.log(value);
-    deletedBooks = value;
+    let trashValue = JSON.parse(localStorage.getItem('accessTrash'));
+    // console.log(trashValue);
+    deletedBooks = trashValue;
     showTrashCards();
 };
 
@@ -146,6 +146,7 @@ function recoverABook(thisButton){
     if(confirm("Are you sure you want to recover this book from the site?")){
         recoverBook(i);
         deletedBooks.splice(i, 1);
+        localStorage.setItem('accessTrash', JSON.stringify(deletedBooks));
         showTrashCards();
     }
 }
