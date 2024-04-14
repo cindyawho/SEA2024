@@ -5,6 +5,7 @@ window.onload = function() {
         books = value;
         showCards();
     } else {
+        localStorage.setItem('accessRecovered', JSON.stringify(books));
         showCards();
     }
 };
@@ -372,7 +373,8 @@ function removeACard(thisButton){
     }
     if(confirm("Are you sure you want to delete this book from the site?")){
         //tried to use delete at first but since I have an array, splice works
-        deleteBook(i); //add the book to the deletedBooks array using the delete book function
+        deletedBooks.push(books[i]); //add the book to the deletedBooks array using the delete book function
+        localStorage.setItem('accessTrash', JSON.stringify(deletedBooks));
         books.splice(i, 1);
         localStorage.setItem('accessRecovered', JSON.stringify(books));
         showCards();
@@ -381,14 +383,3 @@ function removeACard(thisButton){
 
 // Playing Around with the idea of creating a trash for deleted books to undo any accidental deletions
 // In the context of a catalog of my books, I can expand this idea to keep track of what books I lend out
-function deleteBook(bookIndex){
-    // console.log(books[bookIndex]);
-    deletedBooks.push(books[bookIndex]);
-    localStorage.setItem('accessTrash', JSON.stringify(deletedBooks));
-    // window.location.href ='trash.html';
-}
-
-// function accessTrash(){
-//     console.log(deletedBooks);
-//     // Switching to href to access trash
-// }

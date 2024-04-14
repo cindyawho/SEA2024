@@ -143,16 +143,11 @@ function recoverABook(thisButton){
             break;
         }
     }
-    if(confirm("Are you sure you want to recover this book from the site?")){
-        recoverBook(i);
+    if(confirm("Are you sure you want to recover this book from the site?")){ 
+        books.push(deletedBooks[i]);
+        localStorage.setItem('accessRecovered', JSON.stringify(books));
         deletedBooks.splice(i, 1);
         localStorage.setItem('accessTrash', JSON.stringify(deletedBooks));
         showTrashCards();
     }
-}
-function recoverBook(bookIndex){
-    // console.log(books[bookIndex]);
-    books.push(deletedBooks[bookIndex]);
-    localStorage.setItem('accessRecovered', JSON.stringify(books));
-    // window.location.href ='trash.html';
 }
