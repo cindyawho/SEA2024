@@ -124,7 +124,7 @@ header {
 /* ************* CARD Styling ************* */
 #card-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     justify-content: center;
     margin: 20px;
 }
@@ -146,8 +146,8 @@ header {
 
 .card-content h2 {
     margin-top: 0;
-    font-size: 1.25rem;
-    font-size: clamp(1.25rem, 1.1rem + 0.8vw, 2rem);
+    font-size: 2em;
+    /* font-size: clamp(1.25rem, 1.1rem + 0.8vw, 2rem); */
     text-align: center;
 }
 
@@ -192,6 +192,27 @@ ul li{
     color: white;
 }
 
+.imgLink {
+    max-height: 250px;
+    min-height: 250px;
+}
+
+.card-header {
+    max-height: 100px;
+    min-height: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: small;
+}
+
+.bookAuthor {
+    min-height: 50px;
+    max-height:50px;
+}
+
 /* ************* FORM Styling ************* */
 .addCard{
     padding: 2rem;
@@ -231,17 +252,17 @@ ul li{
         grid-template-columns: 1fr, 2fr;
         grid-template-rows: repeat(5, auto);
     }
-    .imgLink{
+    /* .imgLink{
         /* width: 1fr;
-        height: auto; */
+        height: auto;
         grid-row: 1 / 6;
         grid-column: 1 / 2;
-    }
-    .bookTitle{
+    } */
+    /* .bookTitle{
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         padding-left: 10px;
-    }
+    } */
     .w3-panel{
         grid-column: 1/3;
     }
